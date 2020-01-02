@@ -9,13 +9,13 @@ import time
 # define the goal function to find, will not be used directly
 # takes n input variables, here n=2
 def f(x):
-    return np.sin(1.6*x[0])/(x[1]**2)
+    return np.sin(x[0])/(x[1]**2)
 
 
 # the ratio derivative function used to produce the input data
 def ratio(x):
-    nom = 1.6*np.cos(1.6*x[0])/x[1]**2
-    denom = -2*np.sin(1.6*x[0])/(x[1]**3)#-x[0]
+    nom = np.cos(x[0])/x[1]**2
+    denom = -2*np.sin(x[0])/(x[1]**3)#-x[0]
     return nom/denom
 
 
